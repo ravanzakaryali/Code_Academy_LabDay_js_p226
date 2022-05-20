@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/stye.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <title>Lab Day - 6</title>
+</head>
+
+<body>
+    <header class="bg-dark text-light fixed-top">
+        <div class="container">
+            <div class="row py-3 justify-content-between">
+                <div class="logo col-3">
+                    P226
+                </div>
+                <div class="col-4">
+                    <form id="searchForm" class="d-flex h-100 position-relative">
+                        <input placeholder="Search" class="form-control" type="text" name="search" id="search">
+                        <button type="submit"
+                            class="btn btn-primary rounded-0 rounded-end h-100 position-absolute end-0">
+                            Search
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="pt-6">
+        <section id="cards">
+            <div class="container">
+                <div class="row cards-header justify-content-between">
+                    <div class="title col-3">
+                        <h2 class="my-auto">
+                            Cards
+                        </h2>
+                    </div>
+                    <div class="col-4 d-flex justify-content-end">
+                        <button id="clearAll" type="button" class="btn btn-danger me-1">
+                            Clear All
+                        </button>
+                        <button type="button" class="btn btn-primary me-1" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            Create Card
+                        </button>
+                    </div>
+                </div>
+                <div id="cardParent" class="row card-parent py-5">
+                </div>
+            </div>
+        </section>
+    </main>
+    <section id="modal">
+        <div class="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Create Card</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="cardCreateForm">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" name="name" id="nameInput" required
+                                    minlength="3">
+                                <span id="nameError" class="form-text text-danger"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label for="surname" class="form-label">Surname</label>
+                                <input type="text" class="form-control" name="surname" id="surnameInput" required
+                                    minlength="3">
+                                <span id="surnameError" class="form-text text-danger"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Username</label>
+                                <input type="text" class="form-control" name="username" id="usernameInput" required
+                                    minlength="3">
+                                <span id="usernameError" class="form-text text-danger"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label for="img" class="form-label">Image</label>
+                                <input type="url" class="form-control" name="img" id="imgInput" required>
+                                <span id="imgError" class="form-text text-danger"></span>
+                            </div>
+                            <div class="mb-3 d-flex justify-content-center">
+                                <button type="submit" class="btn btn-primary me-2">Submit</button>
+                                <button type="button" data-bs-dismiss="modal"
+                                    class="btn btn-secondary ms-2">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://kit.fontawesome.com/a0dfc67c49.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
